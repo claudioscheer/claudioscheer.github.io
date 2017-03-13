@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Claudio Scheer</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Claudio Scheer website" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Claudio Scheer</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="content-info">
+			<h1 class="name p-t-60 center">Claudio Scheer</h1>
+			<div class="description center">
+				<span class="text-description"></span>
+			</div>
+			<div class="center m-t-40">
+				<a class="button button-blog" href="http://blog.claudioscheer.com.br" target="_blank">
+					See my blog
+				</a>
+			</div>
+		</div>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
-</body>
+		<footer class="center">
+			<div class="">
+				<ul class="icons">
+					<li>
+						<a href="https://github.com/claudioscheer" target="_blank" class="button">
+							<img class="icon" src="icons/github.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="https://fb.me/claudioscheerjr" target="_blank" class="button">
+							<img class="icon" src="icons/facebook.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/claudioscheer" target="_blank" class="button">
+							<img class="icon" src="icons/twitter.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="https://br.linkedin.com/in/claudioscheer" target="_blank" class="button">
+							<img class="icon" src="icons/linkedin.svg" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		
+		<script src="js/typed.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				Typed.new('.text-description', {
+					strings: ["I'm cool.", "I'm a programmer."],
+					typeSpeed: 30
+				});
+			});
+		</script>
+	</body>
 </html>

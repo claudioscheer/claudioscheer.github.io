@@ -1,0 +1,87 @@
+/* SITE */
+body {
+	margin: 0;
+	padding: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #ECEFF1;
+}
+
+.content-info {
+	vertical-align: middle;
+	height: auto;
+	position: relative;
+	margin: auto;
+	max-width: 500px;
+	padding-bottom: 56px;
+}
+
+.name {
+	margin-bottom: 0px;
+	font-size: 3em;
+}
+
+.description {
+	font-size: 1em;
+}
+
+.button {
+	
+	text-decoration: none;
+	color: #FFFFFF;
+	cursor: pointer;
+	border: none;
+}
+
+.button-blog {
+	transition: all 0.2s ease-in-out;
+	background: #37474F;
+	padding: 10px;
+	height: auto;
+	display: inline-block;
+	font-size: 1.1em;
+}
+
+.button-blog:hover {
+	box-shadow: 0 0 10px #888;
+	transform: scale(1.1, 1.1);
+}
+
+footer {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	z-index: 1;
+}
+
+.icons {
+	list-style-type: none;
+	padding: 0;
+}
+
+.icons li {
+	display: inline;
+	word-spacing: 20px;
+}
+
+.icon {
+	transition: all 0.2s ease-in-out;
+	max-width: 15px;
+}
+
+.icon:hover {
+	transform: scale(1.5, 1.5);
+}
+
+/* HELPERS */
+.p-t-60 {
+	padding-top: 60px;
+}
+
+.m-t-40 {
+	margin-top: 40px;
+}
+
+.center {
+	text-align: center;
+}
