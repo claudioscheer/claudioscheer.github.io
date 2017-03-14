@@ -1,4 +1,6 @@
+
 /* SITE */
+
 body {
 	margin: 0;
 	padding: 10px;
@@ -6,13 +8,10 @@ body {
 	background-color: #ECEFF1;
 }
 
-.content-info {
-	vertical-align: middle;
-	height: auto;
-	position: relative;
+.post-content {
 	margin: auto;
-	max-width: 500px;
-	padding-bottom: 56px;
+	position: relative;
+	max-width: 600px;
 }
 
 .name {
@@ -24,12 +23,14 @@ body {
 	font-size: 1em;
 }
 
-.button {
-	
+a {
 	text-decoration: none;
-	color: #FFFFFF;
 	cursor: pointer;
 	border: none;
+}
+
+.button {
+	color: #FFFFFF;
 }
 
 .button-blog {
@@ -54,7 +55,7 @@ footer {
 	z-index: 1;
 }
 
-.icons {
+ul {
 	list-style-type: none;
 	padding: 0;
 }
@@ -73,9 +74,27 @@ footer {
 	transform: scale(1.5, 1.5);
 }
 
+footer .links ul li {
+	display: inline;
+}
+
+footer .links ul li a {
+	color: #000;
+}
+
+footer .links ul li a:hover {
+	text-decoration: underline;
+}
+
+
 /* HELPERS */
+
 .p-t-60 {
 	padding-top: 60px;
+}
+
+.p-b-80 {
+	padding-bottom: 80px;
 }
 
 .m-t-40 {
