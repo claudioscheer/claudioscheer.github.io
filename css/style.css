@@ -33,7 +33,7 @@ a {
 	color: #FFFFFF;
 }
 
-.button-blog {
+.button-default {
 	transition: all 0.2s ease-in-out;
 	background: #37474F;
 	padding: 10px;
@@ -42,7 +42,7 @@ a {
 	font-size: 1.1em;
 }
 
-.button-blog:hover {
+.button-default:hover {
 	box-shadow: 0 0 10px #888;
 	transform: scale(1.1, 1.1);
 }
