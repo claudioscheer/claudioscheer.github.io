@@ -20,19 +20,9 @@ h1 {
     vertical-align: middle;
 }
 
-.post-content {
-    margin: auto;
-    position: relative;
-    max-width: 600px;
-}
-
 .name {
     margin-bottom: 0px;
     font-size: 3em;
-}
-
-.description {
-    font-size: 1em;
 }
 
 a {
@@ -59,14 +49,6 @@ a {
     transform: scale(1.1, 1.1);
 }
 
-footer.fixed {
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    z-index: 1;
-}
-
 ul {
     list-style-type: none;
     padding: 0;
@@ -86,31 +68,11 @@ ul {
     transform: scale(1.5, 1.5);
 }
 
-footer .links ul li {
-    display: inline;
-}
-
-footer .links ul li a {
-    color: #000;
-}
-
-footer .links ul li a:hover {
-    text-decoration: underline;
-}
-
 
 /* HELPERS */
 
 .p-t-60 {
     padding-top: 60px;
-}
-
-.p-b-80 {
-    padding-bottom: 80px;
-}
-
-.m-t-40 {
-    margin-top: 40px;
 }
 
 .m-t-60 {
