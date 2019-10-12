@@ -3,19 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://claudioscheer.github.io/categories/</loc>
-  </url>
-  
-  <url>
     <loc>https://claudioscheer.github.io/</loc>
+    <lastmod>2017-01-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://claudioscheer.github.io/contact/</loc>
+    <loc>https://claudioscheer.github.io/series/hugo/</loc>
+    <lastmod>2017-01-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://claudioscheer.github.io/series/</loc>
+    <lastmod>2017-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://claudioscheer.github.io/series/theme/</loc>
+    <lastmod>2017-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://claudioscheer.github.io/posts/</loc>
+    <lastmod>2017-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://claudioscheer.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://claudioscheer.github.io/contact/</loc>
   </url>
   
   <url>
