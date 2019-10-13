@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://claudioscheer.github.io/series/ai/</loc>
+    <loc>https://claudioscheer.github.io/tags/ai/</loc>
     <lastmod>2019-10-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -13,7 +13,7 @@
   </url>
   
   <url>
-    <loc>https://claudioscheer.github.io/series/deep-learning/</loc>
+    <loc>https://claudioscheer.github.io/tags/deep-learning/</loc>
     <lastmod>2019-10-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -28,7 +28,7 @@
   </url>
   
   <url>
-    <loc>https://claudioscheer.github.io/series/</loc>
+    <loc>https://claudioscheer.github.io/tags/</loc>
     <lastmod>2019-10-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -41,7 +41,7 @@
   </url>
   
   <url>
-    <loc>https://claudioscheer.github.io/tags/</loc>
+    <loc>https://claudioscheer.github.io/series/</loc>
   </url>
   
 </urlset>
