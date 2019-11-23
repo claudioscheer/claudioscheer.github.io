@@ -6,10 +6,19 @@
     <description>Recent content on claudioscheer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://claudioscheer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Android Virtual Devices (AVD) in command line</title>
+      <link>https://claudioscheer.github.io/posts/create-avd/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://claudioscheer.github.io/posts/create-avd/</guid>
+      <description> Install dependencies $ANDROID_HOME/tools/bin/sdkmanager &amp;#34;system-images;android-28;google_apis;x86_64&amp;#34; &amp;#34;emulator&amp;#34; Create AVD $ANDROID_HOME/tools/bin/avdmanager create avd --force -n Nexus6P --package &amp;#34;system-images;android-28;google_apis;x86_64&amp;#34; --device &amp;#34;Nexus 6P&amp;#34; Run AVD $ANDROID_HOME/emulator/emulator -avd Nexus6P Delete AVD $ANDROID_HOME/tools/bin/avdmanager delete avd -n Nexus6P</description>
+    </item>
     
     <item>
       <title>Deep learning materials</title>
@@ -28,7 +37,7 @@ Courses  Machine learning by Stanford University (link)  Books  Deep Learning wi
       
       <guid>https://claudioscheer.github.io/contact/</guid>
       <description>Email: claudioscheer@protonmail.com
-PGP Key ID: 50F7A2AA</description>
+PGP Key: MIT PGP Public Key Server</description>
     </item>
     
   </channel>
