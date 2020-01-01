@@ -17,7 +17,7 @@
       <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://claudioscheer.github.io/posts/managing-avd/</guid>
-      <description> Install dependencies $ANDROID_HOME/tools/bin/sdkmanager &amp;#34;system-images;android-28;google_apis;x86_64&amp;#34; &amp;#34;emulator&amp;#34; Create AVD $ANDROID_HOME/tools/bin/avdmanager create avd --force -n Nexus6P --package &amp;#34;system-images;android-28;google_apis;x86_64&amp;#34; --device &amp;#34;Nexus 6P&amp;#34; Run AVD $ANDROID_HOME/emulator/emulator -avd Nexus6P Delete AVD $ANDROID_HOME/tools/bin/avdmanager delete avd -n Nexus6P</description>
+      <description>Install dependencies $ANDROID_HOME/tools/bin/sdkmanager &amp;#34;system-images;android-28;google_apis;x86_64&amp;#34; &amp;#34;emulator&amp;#34; Create AVD $ANDROID_HOME/tools/bin/avdmanager create avd --force -n Nexus6P --package &amp;#34;system-images;android-28;google_apis;x86_64&amp;#34; --device &amp;#34;Nexus 6P&amp;#34; Run AVD $ANDROID_HOME/emulator/emulator -avd Nexus6P Delete AVD $ANDROID_HOME/tools/bin/avdmanager delete avd -n Nexus6P </description>
     </item>
     
   </channel>

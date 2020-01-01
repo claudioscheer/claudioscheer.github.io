@@ -55,7 +55,7 @@ Android Virtual Devices (AVD) in command line · claudioscheer
     <link rel="icon" type="image/png" href="https://claudioscheer.github.io/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://claudioscheer.github.io/images/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.62.1" />
   </head>
 
   <body class=" ">
@@ -118,16 +118,15 @@ Android Virtual Devices (AVD) in command line · claudioscheer
     <br />
 
     <div>
-      
-
-<h3 id="install-dependencies">Install dependencies</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ANDROID_HOME/tools/bin/sdkmanager <span style="color:#0ff;font-weight:bold">&#34;system-images;android-28;google_apis;x86_64&#34;</span> <span style="color:#0ff;font-weight:bold">&#34;emulator&#34;</span></code></pre></div>
-<h3 id="create-avd">Create AVD</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ANDROID_HOME/tools/bin/avdmanager create avd --force -n Nexus6P --package <span style="color:#0ff;font-weight:bold">&#34;system-images;android-28;google_apis;x86_64&#34;</span> --device <span style="color:#0ff;font-weight:bold">&#34;Nexus 6P&#34;</span></code></pre></div>
-<h3 id="run-avd">Run AVD</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ANDROID_HOME/emulator/emulator -avd Nexus6P</code></pre></div>
-<h3 id="delete-avd">Delete AVD</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ANDROID_HOME/tools/bin/avdmanager delete avd -n Nexus6P</code></pre></div>
+      <h3 id="install-dependencies">Install dependencies</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ANDROID_HOME/tools/bin/sdkmanager <span style="color:#0ff;font-weight:bold">&#34;system-images;android-28;google_apis;x86_64&#34;</span> <span style="color:#0ff;font-weight:bold">&#34;emulator&#34;</span>
+</code></pre></div><h3 id="create-avd">Create AVD</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ANDROID_HOME/tools/bin/avdmanager create avd --force -n Nexus6P --package <span style="color:#0ff;font-weight:bold">&#34;system-images;android-28;google_apis;x86_64&#34;</span> --device <span style="color:#0ff;font-weight:bold">&#34;Nexus 6P&#34;</span>
+</code></pre></div><h3 id="run-avd">Run AVD</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ANDROID_HOME/emulator/emulator -avd Nexus6P
+</code></pre></div><h3 id="delete-avd">Delete AVD</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ANDROID_HOME/tools/bin/avdmanager delete avd -n Nexus6P
+</code></pre></div>
     </div>
 
     <footer>
