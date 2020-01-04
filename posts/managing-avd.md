@@ -1,12 +1,4 @@
-+++
-draft = true
-date = "2019-11-23"
-lastmod = "2019-11-23"
-title = "Android Virtual Devices (AVD) in command line"
-description = "Managing an AVD at the command line"
-math = true
-tags = ["android"]
-+++
+# Android Virtual Devices (AVD) in command line
 
 ### Install dependencies
 

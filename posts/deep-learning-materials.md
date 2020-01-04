@@ -1,11 +1,4 @@
-+++
-date = "2018-08-06"
-lastmod = "2019-10-12"
-title = "Deep learning materials"
-description = "Materials for deep learning"
-math = true
-tags = ["ai", "deep learning"]
-+++
+# Deep learning materials
 
 Bellow there are some materials that can help you to understand deep learning.
 
