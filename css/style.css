@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, sans-serif;
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.name {
+    margin-bottom: 0px;
+    font-size: 3em;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.button {
+    color: #FFFFFF;
+}
+
+.button-default {
+    transition: all 0.2s ease-in-out;
+    background: #37474F;
+    padding: 10px;
+    height: auto;
+    display: inline-block;
+    font-size: 1.1em;
+}
+
+.button-default:hover {
+    box-shadow: 0 0 10px #888;
+    transform: scale(1.05, 1.05);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.icons li {
+    display: inline;
+    word-spacing: 20px;
+}
+
+.icon {
+    transition: all 0.2s ease-in-out;
+    max-width: 20px;
+}
+
+.icon:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.p-t-60 {
+    padding-top: 60px;
+}
+
+.m-t-60 {
+    margin-top: 60px;
+}
+
+.center {
+    text-align: center;
+}
+
+.curriculum-english {
+    font-size: 14px;
+}
