@@ -16,6 +16,12 @@ Bellow there are some materials that can help you to understand deep learning.
 
 - **Neural Networks Demystified** by stephencwelch([link](https://www.youtube.com/watch?v=bxe2T-V8XRs&list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU/))
 
+## Images
+
+![Neural Network Zoo](https://github.com/claudioscheer/claudioscheer.github.io/raw/master/posts/images/NeuralNetworkZoo.png "Neural Network Zoo")
+
 ## Others
 
+- The Neural Network Zoo ([link](https://www.asimovinstitute.org/neural-network-zoo/))
+- AI Cheat Sheets PDF ([link](http://www.becominghumanai.com/))
 - Awesome IA ([link](https://github.com/ChristosChristofidis/awesome-deep-learning/))
