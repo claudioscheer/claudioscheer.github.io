@@ -1,6 +1,6 @@
 # Deep learning materials
 
-Bellow there are some materials that can help you to understand deep learning.
+Below are some materials that can help you to start working with deep learning.
 
 ## Courses
 
