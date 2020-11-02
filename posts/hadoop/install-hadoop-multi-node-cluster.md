@@ -201,3 +201,9 @@ hdfs namenode -format
 ```bash
 start-dfs.sh
 ```
+
+- Start Yarn:
+
+```bash
+start-yarn.sh
+```
