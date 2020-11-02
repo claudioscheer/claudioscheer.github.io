@@ -64,6 +64,14 @@ The full documentation for each edited file can be found here:
                 <value>yarn</value>
         </property>
         <property>
+                <name>mapreduce.map.memory.mb</name>
+                <value>4096</value>
+        </property>
+        <property>
+                <name>mapreduce.reduce.memory.mb</name>
+                <value>4096</value>
+        </property>
+        <property>
                 <name>mapreduce.jobhistory.address</name>
                 <value>hadoop-namenode:10020</value>
         </property>
@@ -93,6 +101,14 @@ The full documentation for each edited file can be found here:
         <property>
                 <name>yarn.nodemanager.aux-services</name>
                 <value>mapreduce_shuffle</value>
+        </property>
+        <property>
+                <name>yarn.nodemanager.resource.memory-mb</name>
+                <value>mapreduce_shuffle</value>
+        </property>
+        <property>
+                <name>yarn.nodemanager.resource.detect-hardware-capabilities</name>
+                <value>true</value>
         </property>
 </configuration>
 ```
