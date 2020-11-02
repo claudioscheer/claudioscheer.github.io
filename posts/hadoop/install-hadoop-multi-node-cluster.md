@@ -185,7 +185,7 @@ start-yarn.sh
         </property>
         <property>
                 <name>yarn.resourcemanager.hostname</name>
-                <value>hadoop-master</value>
+                <value>hadoop-namenode</value>
         </property>
 </configuration>
 ```
