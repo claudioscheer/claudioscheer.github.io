@@ -172,6 +172,10 @@ start-yarn.sh
                 <name>mapreduce.framework.name</name>
                 <value>yarn</value>
         </property>
+        <property>
+                <name>yarn.resourcemanager.hostname</name>
+                <value>hadoop-master</value>
+        </property>
 </configuration>
 ```
 
