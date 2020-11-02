@@ -55,7 +55,7 @@ The full documentation for each edited file can be found here:
 </configuration>
 ```
 
-- Edit `$HADOOP_HOME/etc/hadoop/mapred-site.xml` to:
+- Edit `$HADOOP_HOME/etc/hadoop/mapred-site.xml` to (`mapreduce.application.classpath` must contain the ouput from `hadoop classpath`):
 
 ```xml
 <configuration>
@@ -81,7 +81,7 @@ The full documentation for each edited file can be found here:
         </property>
         <property>
                 <name>mapreduce.application.classpath</name>
-                <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
+                <value></value>
         </property>
 </configuration>
 ```
@@ -93,18 +93,6 @@ The full documentation for each edited file can be found here:
         <property>
                 <name>yarn.nodemanager.aux-services</name>
                 <value>mapreduce_shuffle</value>
-        </property>
-        <property>
-                <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
-                <value>org.apache.hadoop.mapred.ShuffleHandler</value>
-        </property>
-        <property>
-                <name>yarn.nodemanager.log-dirs</name>
-                <value>/home/hadoop/yarn-logs</value>
-        </property>
-        <property>
-                <name>yarn.nodemanager.env-whitelist</name>
-                <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME</value>
         </property>
 </configuration>
 ```
