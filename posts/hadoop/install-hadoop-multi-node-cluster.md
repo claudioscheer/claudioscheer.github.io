@@ -2,6 +2,8 @@
 
 This tutorial is part of [this](https://github.com/claudioscheer/hadoop-hello-world) project.
 
+Each node in the cluster was configured with 4 GB of RAM. Therefore, be sure to adjust the values in the `mapred-site.xml` and `yarn-site.xml` files according to your needs.
+
 The full documentation for each edited file can be found here:
 
 - [core-site.xml](https://hadoop.apache.org/docs/r3.3.0/hadoop-project-dist/hadoop-common/core-default.xml)
