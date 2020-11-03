@@ -6,8 +6,8 @@
 hdfs dfsadmin -report
 ```
 
-- [hadoop-namenode:9870](hadoop-namenode:9870) accesses the web monitoring console for the HDFS cluster;
-- [hadoop-namenode:8088](hadoop-namenode:8088) accesses the web monitoring console for Yarn;
+- [hadoop-namenode:9870](http://hadoop-namenode:9870) accesses the web monitoring console for the HDFS cluster;
+- [hadoop-namenode:8088](http://hadoop-namenode:8088) accesses the web monitoring console for Yarn;
 - List Yarn running nodes:
 
 ```bash
