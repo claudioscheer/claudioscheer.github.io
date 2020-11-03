@@ -13,7 +13,7 @@ The full documentation for each edited file can be found here:
 
 - Run the following [this](https://github.com/claudioscheer/hadoop-hello-world/blob/master/scripts/hadoop-base-setup.sh) script on each node. This will install Hadoop 3.3.0 on your `$HOME`.
 
-### Namenode setup
+### Namenode and datanode setup
 
 - Edit `$HADOOP_HOME/etc/hadoop/core-site.xml` to:
 
@@ -21,7 +21,7 @@ The full documentation for each edited file can be found here:
 <configuration>
         <property>
                 <name>fs.defaultFS</name>
-                <value>hdfs://hadoop-namenode:9000/</value>
+                <value>hdfs://hadoop-namenode:9000</value>
         </property>
 </configuration>
 ```
@@ -44,127 +44,6 @@ The full documentation for each edited file can be found here:
                 <name>dfs.replication</name>
                 <value>2</value>
         </property>
-        <property>
-                <name>dfs.permissions</name>
-                <value>false</value>
-        </property>
-        <property>
-                <name>dfs.namenode.datanode.registration.ip-hostname-check</name>
-                <value>false</value>
-        </property>
-</configuration>
-```
-
-- Edit `$HADOOP_HOME/etc/hadoop/mapred-site.xml` to (`mapreduce.application.classpath` must contain the ouput from `hadoop classpath`):
-
-```xml
-<configuration>
-        <property>
-                <name>mapreduce.framework.name</name>
-                <value>yarn</value>
-        </property>
-        <property>
-                <name>mapreduce.map.memory.mb</name>
-                <value>4096</value>
-        </property>
-        <property>
-                <name>mapreduce.reduce.memory.mb</name>
-                <value>4096</value>
-        </property>
-        <property>
-                <name>mapreduce.jobhistory.address</name>
-                <value>hadoop-namenode:10020</value>
-        </property>
-        <property>
-                <name>mapreduce.jobhistory.webapp.address</name>
-                <value>hadoop-namenode:19888</value>
-        </property>
-        <property>
-                <name>mapreduce.jobhistory.intermediate-done-dir</name>
-                <value>/home/hadoop/mapred-history/tmp</value>
-        </property>
-        <property>
-                <name>mapreduce.jobhistory.done-dir</name>
-                <value>/home/hadoop/mapred-history/done</value>
-        </property>
-        <property>
-                <name>mapreduce.application.classpath</name>
-                <value></value>
-        </property>
-</configuration>
-```
-
-- Edit `$HADOOP_HOME/etc/hadoop/yarn-site.xml` to:
-
-```xml
-<configuration>
-        <property>
-                <name>yarn.nodemanager.aux-services</name>
-                <value>mapreduce_shuffle</value>
-        </property>
-        <property>
-                <name>yarn.nodemanager.resource.memory-mb</name>
-                <value>mapreduce_shuffle</value>
-        </property>
-        <property>
-                <name>yarn.nodemanager.resource.detect-hardware-capabilities</name>
-                <value>true</value>
-        </property>
-</configuration>
-```
-
-- Format namenode:
-
-```bash
-hdfs namenode -format
-```
-
-- Start HDFS processes:
-
-```bash
-start-dfs.sh
-```
-
-- Start Yarn:
-
-```bash
-start-yarn.sh
-```
-
-### Datanode setup
-
-- Edit `$HADOOP_HOME/etc/hadoop/core-site.xml` to:
-
-```xml
-<configuration>
-        <property>
-                <name>fs.defaultFS</name>
-                <value>hdfs://hadoop-namenode:9000/</value>
-        </property>
-</configuration>
-```
-
-- Edit `$HADOOP_HOME/etc/hadoop/hdfs-site.xml` to:
-
-```xml
-<configuration>
-        <property>
-                <name>dfs.datanode.data.dir</name>
-                <value>/home/hadoop/hadoop-data/datanode</value>
-                <final>true</final>
-        </property>
-        <property>
-                <name>dfs.replication</name>
-                <value>2</value>
-        </property>
-        <property>
-                <name>dfs.permissions</name>
-                <value>false</value>
-        </property>
-        <property>
-                <name>dfs.namenode.datanode.registration.ip-hostname-check</name>
-                <value>false</value>
-        </property>
 </configuration>
 ```
 
@@ -175,6 +54,30 @@ start-yarn.sh
         <property>
                 <name>mapreduce.framework.name</name>
                 <value>yarn</value>
+        </property>
+        <property>
+                <name>yarn.app.mapreduce.am.env</name>
+                <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+        </property>
+        <property>
+                <name>mapreduce.map.env</name>
+                <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+        </property>
+        <property>
+                <name>mapreduce.reduce.env</name>
+                <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+        </property>
+        <property>
+                <name>yarn.app.mapreduce.am.resource.mb</name>
+                <value>1024</value>
+        </property>
+        <property>
+                <name>mapreduce.map.memory.mb</name>
+                <value>256</value>
+        </property>
+        <property>
+                <name>mapreduce.reduce.memory.mb</name>
+                <value>256</value>
         </property>
 </configuration>
 ```
@@ -191,10 +94,35 @@ start-yarn.sh
                 <name>yarn.resourcemanager.hostname</name>
                 <value>hadoop-namenode</value>
         </property>
+        <property>
+                <name>yarn.nodemanager.resource.memory-mb</name>
+                <value>3072</value>
+        </property>
+        <property>
+                <name>yarn.scheduler.minimum-allocation-mb</name>
+                <value>128</value>
+        </property>
+        <property>
+                <name>yarn.scheduler.maximum-allocation-mb</name>
+                <value>3072</value>
+        </property>
+        <property>
+                <name>yarn.nodemanager.vmem-check-enabled</name>
+                <value>false</value>
+        </property>
 </configuration>
 ```
 
-- Format namenode:
+### Only for namenode
+
+- Edit `$HADOOP_HOME/etc/hadoop/workers` to:
+
+```
+hadoop-datanode-1
+hadoop-datanode-2
+```
+
+- Format HDFS:
 
 ```bash
 hdfs namenode -format
