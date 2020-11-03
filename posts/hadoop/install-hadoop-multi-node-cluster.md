@@ -139,3 +139,7 @@ start-dfs.sh
 ```bash
 start-yarn.sh
 ```
+
+### Other resources
+
+- [https://www.linode.com/docs/guides/how-to-install-and-set-up-hadoop-cluster/](https://www.linode.com/docs/guides/how-to-install-and-set-up-hadoop-cluster/)
