@@ -33,5 +33,6 @@ hdfs dfs -ls /
 hdfs dfs -mkdir /test
 hdfs dfs -put foo.txt /test
 hdfs dfs -cat /test/foo.txt
+hdfs dfs -get /test/foo.txt ./foo-from-hdfs.txt
 hdfs dfs -rm -r /test
 ```
