@@ -16,4 +16,4 @@ The name will be similar to `name: <alsa_input.???-?????.analog-stereo>`.
 while sleep 0.1; do pacmd set-source-volume alsa_input.???-?????.analog-stereo 65535; done
 ```
 
-65535 is 100%. You can choose the value you want. Use `printf '(65535 * 75) / 100\n' | bc` to find out the value.
+65535 is 100%. You can choose the value you want. If you want the volume to be 75%, you can use `printf '(65535 * 75) / 100\n' | bc` to find out the value.
