@@ -6,6 +6,7 @@
 sudo apt-get update
 sudo apt-get install v4l-utils
 sudo apt-get install v4l2loopback-utils
+sudo apt-get install v4l2loopback-dkms
 ```
 Download [https://github.com/umlaeute/v4l2loopback](https://github.com/umlaeute/v4l2loopback) and uncompress it. Inside de uncompressed folder run
 
