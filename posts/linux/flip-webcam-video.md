@@ -1,5 +1,9 @@
 # Flip webcam video
 
+## Best option
+
+Use the latest version of OBS Studio. It has the option to create a virtual camera that you can configure the way you like.
+
 ### Install utilities
 
 ```bash
