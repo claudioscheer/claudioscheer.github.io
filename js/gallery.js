@@ -8,6 +8,11 @@ fetch("../gallery/gallery.json")
       let galleryItemImg = document.createElement("img");
       galleryItemImg.src = x.thumb;
       galleryItemImg.classList.add("gallery-image");
+      galleryItemImg.loading = "lazy";
+
+      // galleryItemImg.addEventListener("click", () => {
+      //   window.open(x.image, "_blank");
+      // });
 
       galleryItem.appendChild(galleryItemImg);
 

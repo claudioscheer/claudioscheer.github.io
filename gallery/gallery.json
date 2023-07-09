@@ -1,1 +1,22 @@
-[{"image": "./large/IMG_20210227_154945.jpg", "thumb": "./thumb/IMG_20210227_154945.jpg"}]
+[
+  {
+    "image": "./large/IMG_20210227_154945.jpg",
+    "thumb": "./gallery/thumb/IMG_20210227_154945.jpg"
+  },
+  {
+    "image": "./large/Screenshot_20230709_011020.png",
+    "thumb": "./gallery/thumb/Screenshot_20230709_011020.png"
+  },
+  {
+    "image": "./large/Screenshot_20230709_201551.png",
+    "thumb": "./gallery/thumb/Screenshot_20230709_201551.png"
+  },
+  {
+    "image": "./large/Screenshot_20230709_201602.png",
+    "thumb": "./gallery/thumb/Screenshot_20230709_201602.png"
+  },
+  {
+    "image": "./large/Screenshot_20230709_201612.png",
+    "thumb": "./gallery/thumb/Screenshot_20230709_201612.png"
+  }
+]
