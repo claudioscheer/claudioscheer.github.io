@@ -45,6 +45,19 @@ a {
   border: none;
 }
 
+.nav-links {
+  margin-top: 60px;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+
 .button {
   color: #ffffff;
 }

@@ -44,36 +44,12 @@ body {
 }
 
 .gallery-item:hover img {
-  transform: scale(1.1);
-}
-
-.gallery-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
+  transform: scale(1.02);
 }
 
 /* .gallery-image { */
 /*   cursor: pointer; */
 /* } */
-
-.gallery-overlay-icon {
-  font-size: 48px;
-  color: #fff;
-}
 
 @media (max-width: 768px) {
   .gallery {
