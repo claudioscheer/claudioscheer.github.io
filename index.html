@@ -8,49 +8,107 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="favicon/android-chrome-512x512.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link rel="icon" type="image/png" href="favicon/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
     <title>Claudio Scheer</title>
-    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <div class="content">
-      <h1 class="name center">Claudio Scheer</h1>
-      <div class="center">
-        <span>PGP Key ID: </span>
-        <a
-          href="https://keyserver.pgp.com/vkd/DownloadKey.event?keyid=0x0674667950F7A2AA"
-          target="_blank"
-          title="Public PGP Key"
-        >
-          <span>50F7A2AA</span>
-        </a>
+    <div class="flex flex-col min-h-screen">
+      <div id="navbar" class="p-4 mt-4 mb-8">
+        <nav class="flex items-center justify-between flex-wrap">
+          <div
+            id="menu"
+            class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
+          >
+            <div class="text-sm lg:flex-grow">
+              <div class="nav-links flex justify-center">
+                <!-- <a -->
+                <!--   href="/blog" -->
+                <!--   target="_blank" -->
+                <!--   class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:underline" -->
+                <!-- > -->
+                <!--   Tech Blog -->
+                <!-- </a> -->
+                <a
+                  href="/gallery"
+                  target="_blank"
+                  class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:underline"
+                >
+                  Photography
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
-      <div class="center m-t-60">
-        <a
-          class="button button-default"
-          href="https://raw.githubusercontent.com/claudioscheer/resume/master/resume.pdf"
-          target="_blank"
-          style="margin-bottom: 8px"
-        >
-          English Resume
-        </a>
-      </div>
-      <div class="center m-t-120">
-        <ul class="icons">
+
+      <main class="flex flex-1">
+        <div class="m-auto">
+          <h1 class="font-bold text-7xl text-center">Claudio Scheer</h1>
+          <h2 class="text-3xl text-center mt-4">Software Engineer</h2>
+          <div class="text-center mt-4">
+            <span class="mr-2">PGP Key ID: </span>
+            <a
+              class="text-blue-500 hover:underline"
+              href="https://keyserver.pgp.com/vkd/DownloadKey.event?keyid=0x0674667950F7A2AA"
+              target="_blank"
+              title="Public PGP Key"
+            >
+              <span>50F7A2AA</span>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <div class="text-center mt-16 mb-8">
+        <ul class="flex justify-center space-x-5 p-0">
           <li>
             <a
               href="https://github.com/claudioscheer"
               target="_blank"
               title="GitHub"
             >
-              <img class="icon" src="icons/github.svg" />
+              <img
+                class="icon transition-all duration-200 ease-in-out w-5 h-auto hover:scale-150 transform"
+                src="icons/github.svg"
+              />
             </a>
           </li>
           <li>
             <a href="https://github.com/lab-a1" target="_blank" title="A1 Lab">
               <img
-                style="max-width: 32px"
-                class="icon"
+                class="icon transition-all duration-200 ease-in-out w-8 h-auto hover:scale-150 transform"
                 src="icons/a1-lab.svg"
               />
             </a>
@@ -61,19 +119,21 @@
               target="_blank"
               title="Linkedin"
             >
-              <img class="icon" src="icons/linkedin.svg" />
+              <img
+                class="icon transition-all duration-200 ease-in-out w-5 h-auto hover:scale-150 transform"
+                src="icons/linkedin.svg"
+              />
             </a>
           </li>
           <li>
             <a href="mailto:claudioscheer@protonmail.com" title="Email">
-              <img style="max-width: 24px" class="icon" src="icons/mail.svg" />
+              <img
+                class="icon transition-all duration-200 ease-in-out w-6 h-auto hover:scale-150 transform"
+                src="icons/mail.svg"
+              />
             </a>
           </li>
         </ul>
-      </div>
-      <div class="center nav-links">
-        <!-- <a href="/blog" target="_blank">Blog</a> -->
-        <a href="/gallery" target="_blank">Photography</a>
       </div>
     </div>
   </body>

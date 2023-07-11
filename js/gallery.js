@@ -3,19 +3,18 @@ fetch("../gallery/gallery.json")
   .then((gallery) => {
     gallery.map((x) => {
       let galleryItem = document.createElement("div");
-      galleryItem.classList.add("gallery-item");
+      galleryItem.classList.add("overflow-hidden");
 
       let galleryItemImg = document.createElement("img");
       galleryItemImg.src = x.thumb;
-      galleryItemImg.classList.add("gallery-image");
+      galleryItemImg.classList.add(
+        "w-full transition-transform duration-300 ease-in-out transform hover:scale-105".split(
+          " ",
+        ),
+      );
       galleryItemImg.loading = "lazy";
 
-      // galleryItemImg.addEventListener("click", () => {
-      //   window.open(x.image, "_blank");
-      // });
-
       galleryItem.appendChild(galleryItemImg);
-
       document.getElementById("gallery").appendChild(galleryItem);
     });
   });
