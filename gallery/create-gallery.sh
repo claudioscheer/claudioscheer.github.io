@@ -6,7 +6,7 @@ json='['
 for thumb in ./thumb/*; do
   if [ -f "$thumb" ]; then
     thumb_name=$(basename "$thumb")
-    json=$json'{"thumb": "./gallery/thumb/'${thumb_name}'"},'
+    json=$json'{"thumb": "/gallery/thumb/'${thumb_name}'"},'
   fi
 done
 
@@ -16,7 +16,7 @@ for image in ./large/*; do
     image_name=$(basename ${image})
     thumb="thumb/${image_name}"
     convert -thumbnail 600 $image $thumb
-    json=$json'{"thumb": "./gallery/'${thumb}'"},'
+    json=$json'{"thumb": "/gallery/'${thumb}'"},'
   fi
 done
 
