@@ -1,4 +1,4 @@
-fetch("../gallery/gallery.json")
+fetch("/gallery/gallery.json")
   .then((response) => response.json())
   .then((gallery) => {
     gallery.map((x) => {

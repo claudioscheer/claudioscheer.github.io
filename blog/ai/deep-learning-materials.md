@@ -18,7 +18,7 @@ Below are some materials that can help you to start working with deep learning.
 
 ## Images
 
-![Neural Network Zoo](https://github.com/claudioscheer/claudioscheer.github.io/raw/master/posts/ai/images/NeuralNetworkZoo.png "Neural Network Zoo")
+![Neural Network Zoo](https://github.com/claudioscheer/claudioscheer.github.io/raw/master/blog/ai/images/NeuralNetworkZoo.png "Neural Network Zoo")
 
 ## Others
 
