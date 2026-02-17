@@ -9,139 +9,158 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="favicon/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      href="favicon/android-chrome-512x512.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon/favicon-32x32.png"
-    />
-    <link rel="icon" type="image/png" href="favicon/favicon.ico" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Claudio Scheer</title>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        font-weight: 300;
+        background: linear-gradient(160deg, #fafaf8 0%, #f3f1ec 100%);
+        color: #2d2d2d;
+        min-height: 100vh;
+      }
+
+      .name-heading {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        color: #1a1a1a;
+      }
+
+      .subtitle {
+        font-family: "Inter", sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #6b6b6b;
+      }
+
+      .nav-link {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #555;
+        text-decoration: none;
+        padding-bottom: 2px;
+        border-bottom: 1.5px solid transparent;
+        transition: color 0.25s ease, border-color 0.25s ease;
+      }
+
+      .nav-link:hover {
+        color: #1a1a1a;
+        border-bottom-color: #1a1a1a;
+      }
+
+      .pgp-text {
+        font-size: 0.8rem;
+        color: #888;
+        letter-spacing: 0.05em;
+      }
+
+      .pgp-text a {
+        color: #555;
+        text-decoration: none;
+        border-bottom: 1px dashed #aaa;
+        transition: color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .pgp-text a:hover {
+        color: #1a1a1a;
+        border-bottom-color: #1a1a1a;
+      }
+
+      .social-icon {
+        opacity: 0.8;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+      }
+
+      .social-icon:hover {
+        opacity: 1;
+        transform: scale(1.15);
+      }
+    </style>
   </head>
 
   <body>
     <div class="flex flex-col min-h-screen">
-      <div id="navbar" class="p-4 mt-4 mb-8">
-        <nav class="flex items-center justify-between flex-wrap">
-          <div
-            id="menu"
-            class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
-          >
-            <div class="text-sm lg:flex-grow">
-              <div class="nav-links flex justify-center">
-                <a
-                  href="/assets/resume.pdf"
-                  target="_blank"
-                  class="block mt-4 lg:inline-block lg:mt-0 mr-4 transition-all duration-200 ease-in-out h-auto hover:scale-110 transform"
-                >
-                  Resume PDF
-                </a>
-                <a
-                  href="/blog"
-                  target="_blank"
-                  class="block mt-4 lg:inline-block lg:mt-0 mr-4 transition-all duration-200 ease-in-out h-auto hover:scale-110 transform"
-                >
-                  Tech Blog
-                </a>
-                <a
-                  href="/gallery"
-                  target="_blank"
-                  class="block mt-4 lg:inline-block lg:mt-0 mr-4 transition-all duration-200 ease-in-out h-auto hover:scale-110 transform"
-                >
-                  Photography
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
+      <nav class="flex justify-center pt-8 pb-4">
+        <div class="flex items-center" style="gap: 2rem">
+          <a href="/assets/resume.pdf" target="_blank" class="nav-link">
+            Resume
+          </a>
+          <a href="/blog" target="_blank" class="nav-link">
+            Blog
+          </a>
+          <a href="/gallery" class="nav-link">
+            Photography
+          </a>
+        </div>
+      </nav>
 
-      <main class="flex flex-1">
-        <div class="m-auto">
-          <h1 class="font-bold text-7xl text-center">Claudio Scheer</h1>
-          <h2 class="text-3xl text-center mt-4">Software Engineer</h2>
-          <div class="text-center mt-4">
-            <span class="mr-2">PGP Key ID: </span>
+      <main class="flex flex-1 items-center justify-center" style="min-height: 0; padding-top: 3rem; padding-bottom: 3rem">
+        <div class="text-center px-4">
+          <h1 class="name-heading text-6xl md:text-7xl text-center">
+            Claudio Scheer
+          </h1>
+          <h2 class="subtitle text-sm md:text-base text-center mt-5">
+            Software Engineer
+          </h2>
+          <div class="pgp-text text-center mt-6">
+            <span>PGP Key ID: </span>
             <a
-              class="text-blue-500 hover:underline"
               href="/assets/pgp-key.txt"
               target="_blank"
               title="Public PGP Key"
             >
-              <span>50F7A2AA</span>
+              50F7A2AA
             </a>
           </div>
         </div>
       </main>
 
-      <div class="text-center mt-16 mb-8">
-        <ul class="flex justify-center space-x-5 p-0">
+      <footer class="text-center mt-16 mb-8">
+        <ul class="flex justify-center items-center p-0" style="gap: 1.5rem; list-style: none">
           <li>
             <a
               href="https://github.com/claudioscheer"
               target="_blank"
               title="GitHub"
             >
-              <img
-                class="icon transition-all duration-200 ease-in-out w-5 h-auto hover:scale-150 transform"
-                src="icons/github.svg"
-              />
+              <img class="social-icon" style="width: 20px; height: auto" src="icons/github.svg" />
             </a>
           </li>
           <li>
             <a href="https://a1lab.com.br" target="_blank" title="A1 Lab">
-              <img
-                class="icon transition-all duration-200 ease-in-out w-8 h-auto hover:scale-150 transform"
-                src="icons/a1-lab.svg"
-              />
+              <img class="social-icon" style="width: 32px; height: auto" src="icons/a1-lab.svg" />
             </a>
           </li>
           <li>
             <a
               href="https://linkedin.com/in/claudioscheer"
               target="_blank"
-              title="Linkedin"
+              title="LinkedIn"
             >
-              <img
-                class="icon transition-all duration-200 ease-in-out w-5 h-auto hover:scale-150 transform"
-                src="icons/linkedin.svg"
-              />
+              <img class="social-icon" style="width: 20px; height: auto" src="icons/linkedin.svg" />
             </a>
           </li>
           <li>
             <a href="mailto:claudioscheer@protonmail.com" title="Email">
-              <img
-                class="icon transition-all duration-200 ease-in-out w-6 h-auto hover:scale-150 transform"
-                src="icons/mail.svg"
-              />
+              <img class="social-icon" style="width: 22px; height: auto" src="icons/mail.svg" />
             </a>
           </li>
         </ul>
-      </div>
+      </footer>
     </div>
   </body>
 </html>

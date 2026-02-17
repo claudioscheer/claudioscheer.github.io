@@ -13,26 +13,27 @@ fetch("/blog/posts.json")
     const blogPostsDiv = document.getElementById("blog-posts");
 
     for (const tag in postsByTag) {
-      const tagDiv = document.createElement("div");
+      const section = document.createElement("div");
+      section.style.marginBottom = "2.5rem";
+
       const tagHeading = document.createElement("h2");
+      tagHeading.className = "tag-heading";
       tagHeading.textContent = tag;
-      tagDiv.appendChild(tagHeading);
+      section.appendChild(tagHeading);
 
       for (const post of postsByTag[tag]) {
         const postDiv = document.createElement("div");
-        const postTitle = document.createElement("h4");
+        postDiv.className = "post-item";
 
         const postLink = document.createElement("a");
         postLink.href = post.post;
-        postLink.target = "_blank";
+        postLink.className = "post-link";
         postLink.textContent = post.title;
 
-        postTitle.appendChild(postLink);
-        postDiv.appendChild(postTitle);
-
-        tagDiv.appendChild(postDiv);
+        postDiv.appendChild(postLink);
+        section.appendChild(postDiv);
       }
 
-      blogPostsDiv.appendChild(tagDiv);
+      blogPostsDiv.appendChild(section);
     }
   });
