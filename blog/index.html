@@ -1,20 +1,18 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Claudio Scheer tech blog" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@1.9.6/dist/tailwind.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -30,7 +28,6 @@
       }
 
       .blog-title {
-        font-family: "Inter", sans-serif;
         font-weight: 700;
         letter-spacing: -0.03em;
         color: #1a1a1a;
@@ -43,6 +40,8 @@
         color: #888;
         text-decoration: none;
         transition: color 0.2s ease;
+        display: inline-block;
+        padding: 0.5rem 0;
       }
 
       .back-link:hover {
@@ -50,7 +49,6 @@
       }
 
       .tag-heading {
-        font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 0.75rem;
         letter-spacing: 0.15em;
@@ -62,7 +60,6 @@
       }
 
       .post-link {
-        font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 0.95rem;
         color: #2d2d2d;
@@ -75,7 +72,7 @@
       }
 
       .post-item {
-        padding: 0.6rem 0;
+        padding: 0.75rem 0;
         padding-left: 1rem;
         border-left: 2px solid #e0ddd6;
         margin-bottom: 0.25rem;
@@ -84,6 +81,12 @@
 
       .post-item:hover {
         border-left-color: #2d2d2d;
+      }
+
+      a:focus-visible {
+        outline: 2px solid #1a1a1a;
+        outline-offset: 3px;
+        border-radius: 2px;
       }
     </style>
 

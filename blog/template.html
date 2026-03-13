@@ -1,16 +1,14 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Claudio Scheer tech blog" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@1.9.6/dist/tailwind.min.css"
       rel="stylesheet"
     />
     <link
@@ -38,10 +36,18 @@
         color: #888;
         text-decoration: none;
         transition: color 0.2s ease;
+        display: inline-block;
+        padding: 0.5rem 0;
       }
 
       .back-link:hover {
         color: #1a1a1a;
+      }
+
+      a:focus-visible {
+        outline: 2px solid #1a1a1a;
+        outline-offset: 3px;
+        border-radius: 2px;
       }
 
       .markdown-body {
@@ -64,6 +70,8 @@
         padding: 1rem 1.25rem;
         border-radius: 6px;
         border: 1px solid #e0ddd6;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
 
       .markdown-body ul,
@@ -81,7 +89,7 @@
       }
     </style>
 
-    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="https://unpkg.com/showdown@2.1.0/dist/showdown.min.js" defer></script>
   </head>
 
   <body class="p-8">
@@ -94,12 +102,26 @@
 
     <script type="text/javascript">
       fetch("##FILE_NAME##")
-        .then((response) => response.text())
+        .then((response) => {
+          if (!response.ok) throw new Error("Failed to load post");
+          return response.text();
+        })
         .then((text) => {
-          const converter = new showdown.Converter({});
+          const converter = new showdown.Converter({
+            headerLevelStart: 1,
+            strikethrough: true,
+            tables: true,
+          });
           const html = converter.makeHtml(text);
 
-          document.getElementById("post").innerHTML = html;
+          const postEl = document.getElementById("post");
+          postEl.innerHTML = html;
+
+          postEl.querySelectorAll("script").forEach((s) => s.remove());
+        })
+        .catch(() => {
+          document.getElementById("post").textContent =
+            "Unable to load post. Please try again later.";
         });
     </script>
   </body>

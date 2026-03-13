@@ -1,20 +1,18 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Claudio Scheer photography gallery" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@1.9.6/dist/tailwind.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap"
       rel="stylesheet"
     />
 
@@ -30,7 +28,6 @@
       }
 
       .gallery-title {
-        font-family: "Inter", sans-serif;
         font-weight: 700;
         letter-spacing: -0.03em;
         color: #fff;
@@ -43,10 +40,18 @@
         color: #777;
         text-decoration: none;
         transition: color 0.2s ease;
+        display: inline-block;
+        padding: 0.5rem 0;
       }
 
       .back-link:hover {
         color: #fff;
+      }
+
+      a:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 3px;
+        border-radius: 2px;
       }
 
       .gallery-item {
@@ -56,6 +61,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
       }
 
       .gallery-item img {
@@ -63,13 +75,22 @@
         height: 100%;
         object-fit: cover;
         display: block;
-        transition: transform 0.4s ease, opacity 0.4s ease;
-        opacity: 0.9;
+        transition: opacity 0.3s ease;
+        opacity: 0.85;
       }
 
       .gallery-item:hover img {
-        transform: scale(1.03);
         opacity: 1;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .gallery-item {
+          transition: none;
+        }
+        .gallery-item img {
+          transition: none;
+          opacity: 1;
+        }
       }
     </style>
 

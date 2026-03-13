@@ -1,5 +1,8 @@
 fetch("/blog/posts.json")
-  .then((response) => response.json())
+  .then((response) => {
+    if (!response.ok) throw new Error("Failed to load posts");
+    return response.json();
+  })
   .then((posts) => {
     const postsByTag = posts.reduce((acc, post) => {
       const tag = post.tag;
@@ -36,4 +39,8 @@ fetch("/blog/posts.json")
 
       blogPostsDiv.appendChild(section);
     }
+  })
+  .catch(() => {
+    document.getElementById("blog-posts").textContent =
+      "Unable to load posts. Please try again later.";
   });
